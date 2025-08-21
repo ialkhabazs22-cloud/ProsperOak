@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Prosper Oak</title>
+  <meta name="description" content="Get in touch with Prosper Oak for small business funding questions, partnership opportunities, or customer support."/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Prosper Oak</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="apply.html">Apply</a>
+      <a href="compare.html">Compare</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="rates.html">Rates</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <a href="apply.html" class="btn-primary">Get Started</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Contact Prosper Oak</h1>
+      <p class="muted">Questions about funding? We’re here to help.</p>
+    </section>
+
+    <section class="contact-grid">
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form id="contactForm">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <h2>Reach Us Directly</h2>
+        <p><strong>Phone:</strong> (917) 451-2332</p>
+        <p><strong>Email:</strong> info@prosperoak.com</p>
+        <p><strong>Address:</strong> 123 Main Street, Suite 200<br>New York, NY 10001</p>
+        <h3>Business Hours</h3>
+        <p>Mon – Fri: 9:00 AM – 6:00 PM EST<br>Sat – Sun: Closed</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Prosper Oak</p>
+    <nav>
+      <a href="privacy.html">Privacy</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="help.html">Help</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
