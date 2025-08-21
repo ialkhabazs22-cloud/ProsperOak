@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply — Prosper Oak</title>
+  <meta name="description" content="Apply for business funding through Prosper Oak. Multi-step, fast, and mobile-friendly.">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Prosper Oak</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="compare.html">Business Loans</a>
+          <ul class="dropdown-content">
+            <li><a href="compare.html#term">Term Loans</a></li>
+            <li><a href="compare.html#loc">Lines of Credit</a></li>
+            <li><a href="compare.html#sba">SBA Loans</a></li>
+            <li><a href="compare.html#mca">Merchant Cash Advance</a></li>
+            <li><a href="compare.html#equipment">Equipment Financing</a></li>
+            <li><a href="compare.html#debt">Debt Consolidation</a></li>
+            <li><a href="compare.html#factoring">Invoice Factoring</a></li>
+            <li><a href="compare.html#po">PO Financing</a></li>
+            <li><a href="compare.html#cre">CRE Lending</a></li>
+            <li><a href="compare.html#cards">Card Processing</a></li>
+            <li><a href="compare.html#creditrepair">Credit Repair</a></li>
+            <li><a href="compare.html#marketing">Marketing</a></li>
+          </ul>
+        </li>
+        <li><a href="calculators.html">Calculators</a></li>
+        <li><a href="rates.html">Rates</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
+    <a href="apply.html" class="btn-primary">Apply Now</a>
+  </header>
+
+  <main class="container">
+    <h1>Apply for Business Funding</h1>
+
+    <!-- Progress -->
+    <div class="progress">
+      <div id="apply-progress" style="width:0%"></div>
+    </div>
+
+    <!-- Multi-step form -->
+    <form id="apply-form" novalidate>
+      <!-- Step 1: Products + Need -->
+      <section class="step" data-step="1">
+        <h2>What are you looking for?</h2>
+
+        <fieldset class="cards">
+          <label><input type="checkbox" name="products" value="Term Loan"> Term Loan</label>
+          <label><input type="checkbox" name="products" value="Line of Credit"> Line of Credit</label>
+          <label><input type="checkbox" name="products" value="SBA"> SBA</label>
+          <label><input type="checkbox" name="products" value="MCA"> Merchant Cash Advance</label>
+          <label><input type="checkbox" name="products" value="Debt Consolidation"> Debt Consolidation</label>
+          <label><input type="checkbox" name="products" value="Equipment"> Equipment Financing</label>
+          <label><input type="checkbox" name="products" value="Factoring"> Invoice Factoring</label>
+          <label><input type="checkbox" name="products" value="PO Financing"> PO Financing</label>
+          <label><input type="checkbox" name="products" value="CRE Lending"> CRE Lending</label>
+          <label><input type="checkbox" name="products" value="Card Processing"> Card Processing</label>
+          <label><input type="checkbox" name="products" value="Credit Repair"> Credit Repair</label>
+          <label><input type="checkbox" name="products" value="Marketing"> Marketing</label>
+        </fieldset>
+
+        <label for="amount">Amount Needed</label>
+        <input id="amount" name="amount" inputmode="numeric" required placeholder="e.g. 150000"/>
+
+        <label for="purpose">Use of Funds</label>
+        <input id="purpose" name="purpose" required placeholder="Consolidation, inventory, payroll, equipment, marketing, etc."/>
+
+        <div class="actions">
+          <button type="button" class="btn-secondary" data-prev disabled>Back</button>
+          <button type="button" class="btn-primary" data-next>Next</button>
+        </div>
+      </section>
+
+      <!-- Step 2: Business -->
+      <section class="step" data-step="2" hidden>
+        <h2>Business Details</h2>
+
+        <label for="legalName">Legal Business Name</label>
+        <input id="legalName" name="legalName" required/>
+
+        <label for="state">State (2 letters)</label>
+        <input id="state" name="state" maxlength="2" required placeholder="NY"/>
+
+        <label for="tib">Time in Business</label>
+        <select id="tib" name="tib" required>
+          <option value="">Select</option>
+          <option>3–11 months</option>
+          <option>12–24 months</option>
+          <option>2–5 years</option>
+          <option>5+ years</option>
+        </select>
+
+        <label for="revenue">Average Monthly Revenue</label>
+        <select id="revenue" name="revenue" required>
+          <option value="">Select</option>
+          <option>$10k–$25k</option>
+          <option>$25k–$50k</option>
+          <option>$50k–$100k</option>
+          <option>$100k–$250k</option>
+          <option>$250k+</option>
+        </select>
+
+        <label for="address">Business Address</label>
+        <input id="address" name="address" required placeholder="Street, City, ST ZIP"/>
+
+        <div class="actions">
+          <button type="button" class="btn-secondary" data-prev>Back</button>
+          <button type="button" class="btn-primary" data-next>Next</button>
+        </div>
+      </section>
+
+      <!-- Step 3: Owner + Consents -->
+      <section class="step" data-step="3" hidden>
+        <h2>Owner & Contact</h2>
+
+        <div class="two-col">
+          <div>
+            <label for="first">First Name</label>
+            <input id="first" name="first" required/>
+          </div>
+          <div>
+            <label for="last">Last Name</label>
+            <input id="last" name="last" required/>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required/>
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" required/>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <label for="fico">Estimated FICO</label>
+            <select id="fico" name="fico">
+              <option value="">Prefer not to say</option>
+              <option>500–599</option>
+              <option>600–649</option>
+              <option>650–699</option>
+              <option>700–749</option>
+              <option>750+</option>
+            </select>
+          </div>
+          <div>
+            <label for="bank">Primary Bank</label>
+            <input id="bank" name="bank" placeholder="Chase, BofA, etc."/>
+          </div>
+        </div>
+
+        <label class="consent">
+          <input type="checkbox" id="tcpa" name="tcpa" required/>
+          <span>I agree to be contacted by phone, text, and email about financing options. Consent isn’t a condition of purchase. Msg & data rates may apply.</span>
+        </label>
+
+        <label class="consent">
+          <input type="checkbox" id="softpull" name="softpull"/>
+          <span>I authorize a <strong>soft credit check</strong> for prequalification. This will <strong>not</strong> impact my credit score. A hard inquiry may be requested later only with my explicit authorization.</span>
+        </label>
+
+        <div class="actions">
+          <button type="button" class="btn-secondary" data-prev>Back</button>
+          <button type="submit" class="btn-primary" data-submit>Submit</button>
+        </div>
+
+        <div id="apply-status" class="sr-only" aria-live="polite"></div>
+      </section>
+    </form>
+
+    <!-- Thank you (hidden until submit) -->
+    <section id="apply-thanks" class="card" hidden>
+      <h2>Thanks — we received your info.</h2>
+      <p class="muted">We’ll reach out shortly with options. If you authorized a soft pull, we’ll use it to refine pricing without impacting your score.</p>
+      <a href="index.html" class="btn-secondary">Back to Home</a>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span> Prosper Oak</p>
+    <nav>
+      <a href="privacy.html">Privacy</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="help.html">Help</a>
+    </nav>
+    <p class="disclaimer">Prequalification is not a commitment to lend. Soft credit checks only with explicit consent.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
