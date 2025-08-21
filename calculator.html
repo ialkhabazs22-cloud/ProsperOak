@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loan Calculator | Prosper Oak</title>
+  <meta name="description" content="Estimate monthly payments for term loans with Prosper Oak’s simple loan calculator."/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Prosper Oak</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="apply.html">Apply</a>
+      <a href="compare.html">Compare</a>
+      <a href="calculator.html" class="active">Calculator</a>
+      <a href="rates.html">Rates</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="apply.html" class="btn-primary">Get Started</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Term Loan Calculator</h1>
+      <p class="muted">Enter your amount, APR, and term to see an estimated monthly payment. This is an estimate only—final terms depend on underwriting.</p>
+    </section>
+
+    <section class="card" style="padding:16px; max-width:720px; margin:0 auto">
+      <form id="loan-calculator">
+        <label for="loan-amount">Loan Amount</label>
+        <input id="loan-amount" inputmode="numeric" placeholder="e.g. 150000"/>
+
+        <label for="interest-rate">APR %</label>
+        <input id="interest-rate" inputmode="decimal" placeholder="e.g. 18"/>
+
+        <label for="loan-term">Term (months)</label>
+        <input id="loan-term" inputmode="numeric" placeholder="e.g. 36"/>
+
+        <p id="calc-result" class="notice" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section style="text-align:center; margin-top:16px">
+      <a class="btn-primary" href="apply.html">Get Your Options</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Prosper Oak</p>
+    <nav>
+      <a href="privacy.html">Privacy</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="help.html">Help</a>
+    </nav>
+    <p class="disclaimer">Prequalification is not a commitment to lend. Soft credit checks only with explicit consent.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
